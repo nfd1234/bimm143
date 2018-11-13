@@ -38,3 +38,42 @@ write.pdb(prot, file="1hsg_protein.pdb")
 write.pdb(lig, file="1hsg_ligand.pdb")
 ```
 
+##Docking with Vina
+we run this command: ` ~/Downloads/autodock_vina_1_1_2_mac/bin/vina --config config.txt --log
+log.txt`
+
+## Read Docking results
+
+We got a file all.pdbqt that we need to make into a PDB format
+
+```{r}
+res<- read.pdb("all.pdbqt", multi=TRUE)
+write.pdb(res, "results.pdb")
+```
+
+```{r}
+res
+```
+
+To assess the results quantitatively we will calculate the RMSD (root mean square distance)
+between each of the docking results and the known crystal structure using the bio3d package. Back in RStudio read the original ligand with added hydrogens that you produced earlier and
+use the rmsd() function to compare to your docking results.
+
+```{r}
+ori <- read.pdb("ligand.pdbqt")
+rmsd(ori, res)
+```
+
+##Normal Mode Analysis
+```{r}
+pdb<-read.pdb("1HEL")
+modes<-nma(pdb)
+plot(modes, sse=pdb)
+```
+
+Visualize NMA results
+```{r}
+mktrj(modes, mode=7, file = "nma_7.pdb")
+```
+
+putting in gif code would be `![](untitled.gif)`
