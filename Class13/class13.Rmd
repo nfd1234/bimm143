@@ -1,0 +1,40 @@
+---
+title: "Class 13: Structureal Bioinformatics"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Get HIV-pr structure from PDB database
+
+we will work with the structure 1HSG
+
+```{r}
+library(bio3d)
+
+file.name<-get.pdb("1hsg")
+```
+
+Read this into R and examine composition
+
+```{r}
+hiv<-read.pdb(file.name)
+hiv
+```
+
+##Split into separate protein and ligand files
+
+We will use the `trim.pdb()` function to split imput structure
+```{r}
+prot<-trim.pdb(hiv, "protein")
+
+lig<-trim.pdb(hiv, "ligand")
+lig
+```
+```{r}
+write.pdb(prot, file="1hsg_protein.pdb")
+write.pdb(lig, file="1hsg_ligand.pdb")
+```
+
