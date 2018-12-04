@@ -5,7 +5,7 @@ My class list includes:
 
 -[class 5](https://github.com/nfd1234/bimm143/blob/master/Class05/rmarkdown_lecture_5.md)
 
--class 8: [Kmeans Clustering] (https://github.com/nfd1234/bimm143/blob/master/class08/class08.md)
+-class 8: [Kmeans Clustering](https://github.com/nfd1234/bimm143/blob/master/class08/class08.md)
 
 -[class 9](https://github.com/nfd1234/bimm143/blob/master/class09/class09_worksheet.md)
 -class 10
