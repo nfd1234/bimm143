@@ -8,3 +8,5 @@ My class list includes:
 -class 8: [Kmeans Clustering](https://github.com/nfd1234/bimm143/blob/master/class08/class08.md)
 
 -[class 9](https://github.com/nfd1234/bimm143/blob/master/class09/class09_worksheet.md)
+
+-[class 13](https://github.com/nfd1234/bimm143/blob/master/Class13/class13.md)
